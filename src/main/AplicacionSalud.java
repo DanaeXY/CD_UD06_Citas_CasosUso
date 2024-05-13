@@ -3,12 +3,7 @@ package src.main;
 // Clase principal que simula la interacción del usuario con la aplicación
 public class AplicacionSalud {
     public static void main(String[] args) {
-        //TODO: addMedicos 
-        Medico doctor1 = new Medico();
-        Medico doctor2 = new Medico("Natalia", "Fernández Díaz", "25638", "Oncología");
-        Medico doctor3 = new Medico("Jose Manuel", "Cabezas Gutierrez", "55362", "Endocrinología", "2233");
-
-        System.out.println(doctor3.toString());
+        
 
         // Simulando el registro de usuario
         RegistroUsuario registro = new RegistroUsuario();
@@ -18,9 +13,14 @@ public class AplicacionSalud {
         if (registro.verificarCredenciales("usuario1", "contraseña1")) {
             // Simulando las funcionalidades de consulta médica
             GestionMedicos consulta = new GestionMedicos();
+            //TODO: addMedicos 
+            Medico doctor1 = new Medico();
+            Medico doctor2 = new Medico("Natalia", "Fernández Díaz", "25638", "Oncología");
+            Medico doctor3 = new Medico("Jose Manuel", "Cabezas Gutierrez", "55362", "Endocrinología", "2233");
+
+            System.out.println(doctor3.toString());
             
-           
-            
+
             consulta.buscarEspecialistas("Cardiología");
             consulta.verRecetas("Paciente1");
             consulta.generarInforme("Paciente1");

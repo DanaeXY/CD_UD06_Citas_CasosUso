@@ -12,20 +12,24 @@ public class CitasMedicas {
 
     // TODO: Método para agendar una cita
     public void agendarCita(String fechaHora) {
+        calendario.add(fechaHora);
     }
 
     // TODO: Método para cancelar una cita
     public void cancelarCita(String fechaHora) {
-       
+        calendario.remove(fechaHora);
     }
 
     // TODO: Método para reprogramar una cita
     public void reprogramarCita(String fechaHoraAntigua, String fechaHoraNueva) {
-       
+       if (!fechaHoraAntigua.isEmpty()) {
+        calendario.remove(fechaHoraAntigua);
+        calendario.add(fechaHoraNueva);
+       }
     }
 
     // TODO: Método para ver el calendario de citas
     public void verCalendario() {
-        
+        System.out.println(calendario);
     }
 }
