@@ -3,20 +3,28 @@ public class Medico {
     String nombre;
     String apellidos;
     String numeroColegiado;
+    String especialidad;
     String pacienteAsignado;
     public Medico() {
     }
-    public Medico(String nombre, String apellidos, String numeroColegiado) {
+    
+    public Medico(String nombre, String apellidos, String numeroColegiado, String especialidad) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.numeroColegiado = numeroColegiado;
+        this.especialidad = especialidad;
     }
-    public Medico(String nombre, String apellidos, String numeroColegiado, String pacienteAsignado) {
+
+    
+    public Medico(String nombre, String apellidos, String numeroColegiado, String especialidad,
+            String pacienteAsignado) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.numeroColegiado = numeroColegiado;
+        this.especialidad = especialidad;
         this.pacienteAsignado = pacienteAsignado;
     }
+
     public String getNombre() {
         return nombre;
     }
@@ -40,6 +48,14 @@ public class Medico {
     }
     public void setPacienteAsignado(String pacienteAsignado) {
         this.pacienteAsignado = pacienteAsignado;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
     }
 
     
