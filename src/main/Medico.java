@@ -58,5 +58,13 @@ public class Medico {
         this.especialidad = especialidad;
     }
 
+    @Override
+    public String toString() {
+        return "Medico [nombre: " + getNombre() + ", apellidos: " + getApellidos() + ", con número de colegiado: "
+                + getNumeroColegiado() + ", tiene el paciente asignado num.: " + getPacienteAsignado() + ", en la especialidad: "
+                + getEspecialidad() + "]";
+    }
+
+    
     
 }
